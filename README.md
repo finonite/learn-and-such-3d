@@ -6,3 +6,6 @@ Menggunakan ScriptableObject sebagai points / route sebuah GameObject. GameObjec
 
 ### WEEK TWO - PATHFINDING
 Menggunakan NavMeshPlus Package dan Unity AI. Membuat area Walkable dan Non-Walkable (Obstacles) untuk enemy menggunakan Navigation Surface.
+
+### WEEK THREE - FINITE STATE MACHINE
+Implementasi FSM, transisi state dengan switch case statement
