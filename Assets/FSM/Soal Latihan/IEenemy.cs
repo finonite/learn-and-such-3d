@@ -11,10 +11,14 @@ public interface IEnemy
 public class Zombie : IEnemy
 {
     private int hp = 50;
+    private int rangeToAttack = 5;
 
     public void Attack()
     {
+        if(player.position < rangeToAttack)
+        {
         Console.WriteLine("Zombie menerjang dan menggigit dari jarak dekat!");
+        }
     }
 
     public void TakeDamage(int amount)
@@ -43,10 +47,18 @@ public class Turret : IEnemy
 public class Boss : IEnemy
 {
     private int hp = 500;
+    private int ultimateRequirement = 10;
+    private int ultimateCharge = 0;
 
     public void Attack()
     {
+        if(ultimateCharge == ultimateRequirement) {
         Console.WriteLine("BOSS MENGELUARKAN SERANGAN ULTIMATE: METEOR STRIKE!");
+        ultimateCharge = 0;
+        } else
+        {
+            ultimateCharge++;
+        }
     }
 
     public void TakeDamage(int amount)
@@ -62,7 +74,6 @@ class Program
     {
         IEnemy[] enemies = { new Zombie(), new Turret(), new Boss() };
 
-        Console.WriteLine("=== Battle Phase ===");
         foreach (var enemy in enemies)
         {
             enemy.Attack();
