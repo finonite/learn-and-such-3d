@@ -9,3 +9,6 @@ Menggunakan NavMeshPlus Package dan Unity AI. Membuat area Walkable dan Non-Walk
 
 ### WEEK THREE - FINITE STATE MACHINE
 Implementasi FSM, transisi state dengan switch case statement
+
+### WEEK FOUR - Q LEARNING
+Implementasi Q Learning, Adaptive Learning
